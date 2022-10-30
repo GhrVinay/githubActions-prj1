@@ -28,7 +28,6 @@ jobs:
     steps:
     # Runs a single command using the runners shell
     - name: Send greeting
-    - run: |
-          echo "Hello ${{ github.event.inputs.name }}"
-          cat README.md
+    - run: echo "Hello ${{ github.event.inputs.name }}"
+    - run: cat README.md
     - run: echo "last line"

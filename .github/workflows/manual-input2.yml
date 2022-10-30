@@ -15,6 +15,8 @@ on:
         default: 'World'
         # Input has to be provided for the workflow to run
         required: true
+      friendly name:
+        required: false
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -28,5 +30,7 @@ jobs:
     steps:
     # Runs a single command using the runners shell
     - name: Send greeting
-      run: echo "Hello ${{ github.event.inputs.name }}"
-    - run: cat README.md
+      run: |
+        echo "Hello ${{ github.event.inputs.name }}"
+        echo "How are you ${{.github.event.inputs.friendly name }}"
+    - run: echo "🙂"

@@ -8,9 +8,12 @@ Currently checked⍻ that:
 (Note: Indentation is very important for the yml file)
 3. We can run multiple commands using "- run:" or "-name: run:"
 4. We can checkout the whole repo and access files inside it
+5. We can have "on: workflow_dispatch:" "with inputs:" for passing inputs and trigger jobs manually
 
 Event - trigger
 Jobs - When event occurs, it runs all the jobs within the workflow. Jobs contains multiple steps and under it actions
 Runners - Container env that runs our code (github by default provides a runner, but user can also host their own runner)
 
-Ref: https://www.youtube.com/watch?v=mFFXuXjVgkU&feature=share&utm_source=EJGixIgBCJiu2KjB4oSJEQ
+Ref:
+https://www.youtube.com/watch?v=mFFXuXjVgkU
+https://www.youtube.com/watch?v=uokLqm3scBU

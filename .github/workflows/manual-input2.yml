@@ -16,7 +16,7 @@ on:
         # Input has to be provided for the workflow to run
         required: true
       friendly-name:
-        required: true
+        required: false
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -32,5 +32,5 @@ jobs:
     - name: Send greeting
       run: |
         echo "Hello ${{ github.event.inputs.name }}"
-        echo "How are you ${{.github.event.inputs.friendly-name }}"
+        echo "How are you ${{ github.event.inputs.friendly-name }}"
     - run: echo "🙂"
